@@ -1,62 +1,85 @@
-# Project Bootstrap Template
+# 🤖 Thymio Kids Code Lab
 
-This repository provides a reusable template to bootstrap a standardized project structure for documentation, scripts, and demos.
+Willkommen im **Thymio Kids Code Lab**!  
+Dieses Projekt enthält Materialien, Übungen und Unterlagen für einen **Einsteigerkurs in Robotik und Programmierung für Kinder** im Alter von 9 bis 13 Jahren.  
+Ziel ist es, spielerisch die Welt der Roboter zu entdecken - mit dem **Thymio-Roboter** und der **grafischen Programmiersprache Blockly / VPL3**.
 
-## 📦 Features
+## 📂 Projektstruktur
 
-- 🧰 Self-contained initialization script (`init_project.sh`) with embedded template payload
-- 🔁 Build script (`build_project.sh`) to package and update the payload
-- 📄 Markdown-based documentation and Pandoc-compatible PDF generation
-- 🧪 Compatible with macOS, Linux, and container-based dev environments
-- 🚀 GitHub Actions workflow publishes the latest script to a GitHub Release
+```text
+thymio-kids-code-lab/
+├── LICENSE                    # Lizenz (z. B. MIT)
+├── README.md                 # Dieses Readme (Deutsch)
+├── README.en.md              # Englische Version (optional)
+├── project-template.code-workspace
+│
+├── artefacts/                # Exportierte Dateien (PDFs, ZIPs, Präsentationen)
+│   ├── de/
+│   └── en/
+│
+├── bin/                      # Skripte (z. B. für Export oder Sprach-Sync)
+│
+├── doc/                      # Kursunterlagen, Agenda, Beschreibung etc.
+│   ├── de/                   # Deutschsprachige Inhalte
+│   │   ├── agenda.md
+│   │   ├── kursbeschreibung.md
+│   │   ├── einführung.md
+│   │   └── aufgaben/
+│   └── en/                   # Englische Übersetzungen (optional)
+│
+├── fonts/                    # Eigene Schriften (für PDFs, Präsentationen)
+│
+├── images/                   # Bilder für Materialien, Slides, Readmes
+│
+├── notes/                    # Notizen, ToDos, Feedback
+│
+└── sql/                      # (Optional, z. B. für Logik-Übungen, Scratch-Projekte etc.)
+````
 
-## 🚀 Getting Started
+## 🚀 Ziel des Kurses
 
-To create a new project from this template:
+- Kinder lernen spielerisch, wie Roboter *denken* und handeln
+- Sie arbeiten im Team mit einem echten Thymio-Roboter
+- Sie programmieren erste Aufgaben mit **Blockly / VPL3**
+- Kreative Herausforderungen fördern Logik, Teamarbeit & Problemlösung
 
-```bash
-./bin/init_project.sh -d /path/to/target -n my-new-project
-```
+## 🎓 Für wen ist dieses Projekt?
 
-To update the embedded payload after making changes:
+- Ferienpass-Organisator\:innen
+- Lehrpersonen & Schulklassen
+- Tüftler\:innen, Makerspaces
+- Eltern, die Robotik kindgerecht vermitteln möchten
 
-```bash
-./bin/build_project.sh
-```
+## 🛠️ Voraussetzungen
 
-## 🌐 Quick Download via GitHub Release
+- 1 Thymio pro 2-3 Kinder
+- Laptop mit Thymio Suite oder Web-Zugang (Blockly/VPL3)
+- Lokale WLAN-Verbindung (empfohlen)
+- Kursmaterialien und vorbereitete Übungen (siehe `doc/de/`)
 
-You can download the latest generated `init_project.sh` script directly from GitHub:
+## 📚 Nützliche Ressourcen
 
-```bash
-curl -fsSL -H "Authorization: token $GH_PAT" \
-  -o init_project.sh \
-  https://github.com/<user>/<repo>/releases/download/latest/init_project.sh
-chmod +x init_project.sh
-```
+- [Thymio Website](https://www.thymio.org)
+- [Blockly/VPL3 Online-Editor](https://vpl3.thymio.org)
+- [Thymio Doku & API](https://doc.therobot.ch)
+- [Thymio Challenge Cards](https://www.thymio.org/activities)
 
-> Replace `<user>` and `<repo>` with your actual GitHub username and repository name.
+## 🌍 Mehrsprachigkeit
 
-## 📁 Folder Overview
+Dieses Projekt ist standardmässig **auf Deutsch** aufgebaut.
+Eine englische Version der wichtigsten Inhalte befindet sich in:
 
-| Folder         | Description                                                      |
-|----------------|------------------------------------------------------------------|
-| `artefacts/`   | Generated files like PDFs, Excel, or Office docs                 |
-| `bin/`         | Utility scripts for setup and automation                         |
-| `doc/`         | Markdown documentation sources                                   |
-| `fonts/`       | Fonts used for PDF generation                                    |
-| `images/`      | Screenshots, diagrams, and logos                                 |
-| `notes/`       | Drafts, notes, and to-do items                                   |
-| `sql/`         | SQL scripts for validation or automation                         |
+📁 `README.en.md`
+📁 `doc/en/`
 
-## 🔐 GitHub Actions Setup
+## 📜 Lizenz
 
-This repo includes a workflow that automatically builds `init_project.sh` and uploads it to the `latest` release.
+Dieses Projekt steht unter der **MIT-Lizenz** und darf frei für Bildungszwecke genutzt werden.
+Bei Weiterverwendung bitte die Quelle angeben.
 
-To make this work:
-1. Push to `main`
-2. The GitHub Actions workflow will publish the script to the release
+## 🤝 Mitwirken
 
-## 📝 License
+Fragen oder Ideen?
+Beiträge, Feedback und Pull Requests sind jederzeit willkommen!
 
-Apache License 2.0 — See [LICENSE](http://www.apache.org/licenses/LICENSE-2.0)
+**Let's code the future - kindgerecht, kreativ und mit Spaß!** 🚀
